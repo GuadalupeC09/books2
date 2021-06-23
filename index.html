@@ -1,0 +1,48 @@
+INSERT INTO authors (name) VALUES ('Jane Austen');
+INSERT INTO authors (name) VALUES ('Emily Dickinson');
+INSERT INTO authors (name) VALUES ('Fyodor Dostoevsky');
+INSERT INTO authors (name) VALUES ('William Shakespeare');
+INSERT INTO authors (name) VALUES ('Lau Tzu');
+
+INSERT INTO books (title) VALUES ('C sharp');
+INSERT INTO books (title) VALUES ('Java');
+INSERT INTO books (title) VALUES ('Python');
+INSERT INTO books (title) VALUES ('PHP');
+INSERT INTO books (title) VALUES ('Ruby');
+
+UPDATE books SET title = 'C#' WHERE id = 1;
+SELECT * FROM books;
+SELECT * FROM authors;
+UPDATE authors SET name = 'Bill' WHERE id = 4;
+
+INSERT INTO favorites (author_id,book_id) VALUES (1, 1);
+INSERT INTO favorites (author_id,book_id) VALUES (1,1);
+SELECT * FROM favorites;
+INSERT INTO favorites (author_id,book_id) VALUES (2, 1);
+INSERT INTO favorites (author_id,book_id) VALUES (2, 2);
+INSERT INTO favorites (author_id,book_id) VALUES (2, 3);
+
+SELECT * FROM authors;
+INSERT INTO favorites (author_id,book_id) VALUES (3, 1);
+INSERT INTO favorites (author_id,book_id) VALUES (3, 1);
+INSERT INTO favorites (author_id,book_id) VALUES (3, 1);
+INSERT INTO favorites (author_id,book_id) VALUES (3, 1);
+
+SELECT * FROM authors;
+INSERT INTO favorites (author_id,book_id) VALUES (4, 1);
+INSERT INTO favorites (author_id,book_id) VALUES (4, 2);
+INSERT INTO favorites (author_id,book_id) VALUES (4, 3);
+INSERT INTO favorites (author_id,book_id) VALUES (4, 4);
+INSERT INTO favorites (author_id,book_id) VALUES (4, 5);
+
+SELECT * FROM books_schema.favorites WHERE book_id = 3;
+
+DELETE FROM books_schema.favorites WHERE author_id = 2 AND book_id = 3;
+
+SELECT * FROM authors;
+INSERT INTO favorites (author_id,book_id) VALUES (5, 2);
+
+
+SELECT * FROM books_schema.favorites WHERE author_id = 3;
+
+SELECT author_id FROM books_schema.favorites WHERE book_id =5;
